@@ -30,10 +30,11 @@ jobs:
         key: ${{ secrets.CACHE_NAME }}-${{ github.run_id }}
         restore-keys: ${{ secrets.CACHE_NAME }}-
     - name: Run script
-      env:
+      env:   
         DD_BOT_ACCESS_TOKEN: ${{secrets.DD_BOT_ACCESS_TOKEN}}
         DD_BOT_SECRET: ${{secrets.DD_BOT_SECRET}}
         SCT_KEY: ${{secrets.SCT_KEY}}
+        
         BARK_TOKEN: ${{secrets.BARK_TOKEN}}
         PUSHPLUS_TOKEN: ${{secrets.PUSHPLUS_TOKEN}}
         MIAO_CODE: ${{secrets.MIAO_CODE}}
@@ -44,6 +45,7 @@ jobs:
         WZXY_LONGITUDE: ${{secrets.LONGITUDE}}
         WZXY_COUNTRY: ${{secrets.COUNTRY}}
         WZXY_CITY: ${{secrets.CITY}}
+        WZXY_AREACODE: ${{secrets.AREACODE}}
         WZXY_DISTRICT: ${{secrets.DISTRICT}}
         WZXY_PROVINCE: ${{secrets.PROVINCE}}
         WZXY_TOWNSHIP: ${{secrets.TOWNSHIP}}
